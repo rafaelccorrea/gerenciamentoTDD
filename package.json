@@ -1,0 +1,22 @@
+{
+  "name": "gerenciamentotdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src/** test/** --fix"
+  },
+  "author": "Rafael Correa",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.43.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "jest": "23.6.0",
+    "supertest": "3.3.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
