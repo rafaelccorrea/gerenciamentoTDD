@@ -7,7 +7,7 @@
     "dev": "node src/server.js",
     "test": "jest",
     "lint": "eslint src/** test/** --fix",
-    "secure-mode": "jest --watch --verbose=true",
+    "secure-mode": "jest --watch --verbose=false",
     "migration:create": "node_modules/.bin/knex migrate:make"
   },
   "author": "Rafael Correa",
@@ -24,6 +24,7 @@
     "consign": "^0.1.6",
     "express": "^4.18.2",
     "knex": "^0.15.2",
+    "knex-logger": "^0.1.0",
     "pg": "8.0.3"
   }
 }

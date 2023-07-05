@@ -3,9 +3,12 @@ const app = require('express')();
 // Gerenciador de arquivos para carregamento automatico
 const consign = require('consign');
 const knex = require('knex');
+const knexLogger = require('knex-logger');
 const knexfile = require('../knexfile');
 
 app.db = knex(knexfile.test);
+
+app.use(knexLogger(app.db));
 
 consign({ cwd: 'src', verbose: false })
   .include('./config/middlewares.js')

@@ -7,7 +7,7 @@ test('List all users', () => request(app).get('/users').then((res) => {
   expect(res.body.length).toBeGreaterThan(0);
 }));
 
-test.only('Create a new user', () => {
+test('Create a new user', () => {
   const mail = `${Date.now()}@mail.com`;
   return request(app).post('/users')
     .send({
