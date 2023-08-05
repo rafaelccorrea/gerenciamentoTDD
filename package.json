@@ -20,6 +20,7 @@
     "supertest": "3.3.0"
   },
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parse": "^0.1.0",
     "consign": "^0.1.6",
     "express": "^4.18.2",
