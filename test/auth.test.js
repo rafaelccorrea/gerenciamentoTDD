@@ -62,3 +62,7 @@ test('should reject login when user does not exist', async () => {
   expect(response.status).toBe(400);
   expect(response.body.error).toBe('User or password incorrect!');
 });
+
+test('should reject access router protected', async () => request(app).get('/users').then((response) => {
+  expect(response.status).toBe(401);
+}));
