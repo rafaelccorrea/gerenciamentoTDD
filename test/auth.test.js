@@ -7,6 +7,14 @@ beforeEach(() => {
   email = `${Date.now()}@mail.com`;
 });
 
+test('should create user router signup', () => request(app).post('/auth/signup').send({ name: 'User Teste Signup', email, password: 'password123' })
+  .then((res) => {
+    expect(res.status).toBe(201);
+    expect(res.body.name).toBe('User Teste Signup');
+    expect(res.body).toHaveProperty('email');
+    expect(res.body).not.toHaveProperty('password');
+  }));
+
 test('should receive the token when logging in', async () => {
   // Criação de um usuário de teste
   await app.services.user.save({
